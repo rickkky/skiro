@@ -1,0 +1,22 @@
+{
+  "name": "squirrel",
+  "version": "0.1.0",
+  "description": "Knowledge base manager.",
+  "keywords": [
+    "knowledge-base",
+    "rich-editor"
+  ],
+  "author": "ricky <rickkkkkkkkky@foxmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickkky/squirrel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rickkky/squirrel/issues"
+  },
+  "homepage": "https://github.com/rickkky/squirrel#readme",
+  "scripts": {
+  }
+}
