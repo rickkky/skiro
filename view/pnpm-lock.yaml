@@ -16,6 +16,7 @@ specifiers:
   eslint-plugin-cypress: ^2.12.1
   eslint-plugin-vue: ^8.2.0
   jsdom: ^19.0.0
+  monaco-editor: ^0.33.0
   pinia: ^2.0.11
   postcss: ^8.4.12
   prettier: ^2.5.1
@@ -30,6 +31,7 @@ specifiers:
 
 dependencies:
   autoprefixer: 10.4.4_postcss@8.4.12
+  monaco-editor: 0.33.0
   pinia: 2.0.12_typescript@4.5.5+vue@3.2.31
   postcss: 8.4.12
   tailwindcss: 3.0.23_autoprefixer@10.4.4
@@ -2946,6 +2948,10 @@ packages:
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
+
+  /monaco-editor/0.33.0:
+    resolution: {integrity: sha512-VcRWPSLIUEgQJQIE0pVT8FcGBIgFoxz7jtqctE+IiCxWugD0DwgyQBcZBhdSrdMC84eumoqMZsGl2GTreOzwqw==}
+    dev: false
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
