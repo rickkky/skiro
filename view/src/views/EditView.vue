@@ -1,26 +1,5 @@
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue';
-import * as monaco from 'monaco-editor';
-import MarkdownIt from 'markdown-it';
-
-const markdownParser = new MarkdownIt();
-const editorElement = ref<HTMLDivElement | null>(null);
-let editor: monaco.editor.IStandaloneCodeEditor | null = null;
-let renderedMarkdown = reactive({
-  html: '',
-  text: '',
-});
-
-onMounted(() => {
-  editor = monaco.editor.create(editorElement.value!, {
-    value: '# Hello World!',
-    language: 'markdown',
-    theme: 'vs',
-  });
-  editor.onDidChangeModelContent(() => {
-    renderedMarkdown.html = markdownParser.render(editor?.getValue() || '');
-  });
-});
+import SplitedEditor from '@/components/SplitedEditor.vue';
 </script>
 
 <template>
@@ -43,9 +22,6 @@ onMounted(() => {
         </svg>
       </button>
     </div>
-    <div class="flex flex-auto">
-      <div ref="editorElement" class="w-1/2 h-full"></div>
-      <div class="w-1/2 h-full" v-html="renderedMarkdown.html"></div>
-    </div>
+    <SplitedEditor class="flex-auto" />
   </div>
 </template>
