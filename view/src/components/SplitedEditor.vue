@@ -1,17 +1,20 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import * as monaco from 'monaco-editor';
+import { defineThemes, themes } from '@/utils/monaco-editor/themes';
 import MarkdownDisplayer from './MarkdownDisplayer.vue';
 
 const editorElement = ref<HTMLDivElement | null>(null);
 let editor: monaco.editor.IStandaloneCodeEditor | null = null;
-const text = ref('# Hello World\n$$\na=b+c\n$$');
+const text = ref('# Hello World\n\n$$\na=b+c\n$$');
+
+defineThemes();
 
 onMounted(() => {
   editor = monaco.editor.create(editorElement.value!, {
     value: text.value,
     language: 'markdown',
-    theme: 'vs',
+    theme: themes.light.id,
   });
   editor.onDidChangeModelContent(() => {
     text.value = editor!.getValue();
