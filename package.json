@@ -1,5 +1,5 @@
 {
-  "name": "squirrel",
+  "name": "skiro",
   "version": "0.1.0",
   "description": "Knowledge base manager.",
   "keywords": [
@@ -11,11 +11,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rickkky/squirrel.git"
+    "url": "git+https://github.com/rickkky/skiro.git"
   },
   "bugs": {
-    "url": "https://github.com/rickkky/squirrel/issues"
+    "url": "https://github.com/rickkky/skiro/issues"
   },
-  "homepage": "https://github.com/rickkky/squirrel#readme",
+  "homepage": "https://github.com/rickkky/skiro#readme",
   "scripts": {}
 }
