@@ -1,1 +1,3 @@
-export default () => ({});
+export default () => ({
+  workspace: process.env.WORKSPACE,
+});

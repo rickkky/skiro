@@ -9,6 +9,7 @@ import { NoteModule } from './note/note.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: ['.env.local', '.env'],
       load: [configuration],
     }),
     NoteModule,

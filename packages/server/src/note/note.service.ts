@@ -1,11 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import * as fs from 'fs/promises';
+import { ConfigService } from '@nestjs/config';
+import { mkdir } from 'fs/promises';
 
 @Injectable()
 export class NoteService {
+  constructor(private configService: ConfigService) {}
+
   async create(id: string, name: string) {
+    const workspace = this.configService.get<string>('WORKSPACE');
     try {
-      await fs.mkdir(`./data/${id}`, { recursive: true });
+      await mkdir(`${workspace}/${id}`);
     } catch (error) {
       console.log(error);
     }
