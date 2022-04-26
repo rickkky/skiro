@@ -7,11 +7,14 @@ import { NoteModule } from './note/note.module';
 
 @Module({
   imports: [
+    // Configuration
+    // https://docs.nestjs.com/techniques/configuration
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ['.env.local', '.env'],
       load: [configuration],
     }),
+    // Service Modules
     NoteModule,
   ],
   controllers: [AppController],
