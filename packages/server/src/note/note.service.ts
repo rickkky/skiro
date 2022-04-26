@@ -7,11 +7,8 @@ export class NoteService {
   constructor(private configService: ConfigService) {}
 
   async create(id: string, name: string) {
-    const workspace = this.configService.get<string>('WORKSPACE');
-    try {
-      await mkdir(`${workspace}/${id}`);
-    } catch (error) {
-      console.log(error);
-    }
+    const workspacePath = this.configService.get<string>('WORKSPACE_PATH');
+    const noteFolder = this.configService.get<string>('NOTE_FOLDER');
+    await mkdir(`${workspacePath}/${noteFolder}/${id}`);
   }
 }
