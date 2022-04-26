@@ -1,4 +1,9 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  InternalServerErrorException,
+  Post,
+} from '@nestjs/common';
 import { CreateNoteDto } from './dto/create-note.dto';
 import { NoteService } from './note.service';
 
@@ -13,7 +18,7 @@ export class NoteController {
     try {
       await this.noteService.create(id, name);
     } catch (error) {
-      return error;
+      throw new InternalServerErrorException(error);
     }
     return 'success';
   }
