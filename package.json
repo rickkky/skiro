@@ -6,8 +6,8 @@
     "knowledge-base",
     "rich-editor"
   ],
-  "author": "ricky <rickkkkkkkkky@foxmail.com>",
-  "license": "MIT",
+  "author": "rickkky <rickkky@foxmail.com>",
+  "license": "UNLICENSED",
   "main": "index.js",
   "repository": {
     "type": "git",
